@@ -1,0 +1,16 @@
+##############################################################################
+## Filename:          D:/ra205-2016/lab4/basic_system/pcores/lab4_peripheral_v1_00_a/data/lab4_peripheral_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Mar 26 11:02:23 2019 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib lab4_peripheral_v1_00_a user_logic vhdl
+lib lab4_peripheral_v1_00_a lab4_peripheral vhdl
+lib lab4_peripheral_v1_00_a char_rom vhdl
+lib lab4_peripheral_v1_00_a graphics_mem vhdl
+lib lab4_peripheral_v1_00_a text_mem vhdl
+lib lab4_peripheral_v1_00_a vga vhdl
+lib lab4_peripheral_v1_00_a vga_sync vhdl
+lib lab4_peripheral_v1_00_a vga_top vhdl

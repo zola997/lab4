@@ -14,10 +14,21 @@
  PORT RS232_Uart_1_sout = RS232_Uart_1_sout, DIR = O
  PORT RS232_Uart_1_sin = RS232_Uart_1_sin, DIR = I
  PORT RESET = RESET, DIR = I, SIGIS = RST, RST_POLARITY = 0
- PORT LEDS_TRI_O = my_peripheral_0_LED_Data, DIR = O, VEC = [0:7]
  PORT DIP_Switches_TRI_I = DIP_Switches_TRI_I, DIR = I, VEC = [0:7]
  PORT CLK_P = CLK, DIR = I, DIFFERENTIAL_POLARITY = P, SIGIS = CLK, CLK_FREQ = 50000000
  PORT CLK_N = CLK, DIR = I, DIFFERENTIAL_POLARITY = N, SIGIS = CLK, CLK_FREQ = 50000000
+ PORT lab4_peripheral_0_S_AXI_ACLK_pin = net_lab4_peripheral_0_S_AXI_ACLK_pin, DIR = I, SIGIS = CLK
+ PORT lab4_peripheral_0_CLK_I_pin = net_lab4_peripheral_0_CLK_I_pin, DIR = I, SIGIS = CLK
+ PORT lab4_peripheral_0_RESET_N_I_pin = net_lab4_peripheral_0_RESET_N_I_pin, DIR = I, SIGIS = RST
+ PORT lab4_peripheral_0_VGA_HSYNC_O_pin = lab4_peripheral_0_VGA_HSYNC_O, DIR = O
+ PORT lab4_peripheral_0_VGA_VSYNC_O_pin = lab4_peripheral_0_VGA_VSYNC_O, DIR = O
+ PORT lab4_peripheral_0_BLANK_O_pin = lab4_peripheral_0_BLANK_O, DIR = O
+ PORT lab4_peripheral_0_PIX_CLOCK_O_pin = lab4_peripheral_0_PIX_CLOCK_O, DIR = O
+ PORT lab4_peripheral_0_PSAVE_O_pin = lab4_peripheral_0_PSAVE_O, DIR = O
+ PORT lab4_peripheral_0_SYNC_O_pin = lab4_peripheral_0_SYNC_O, DIR = O
+ PORT lab4_peripheral_0_RED_O_pin = lab4_peripheral_0_RED_O, DIR = O, VEC = [7:0]
+ PORT lab4_peripheral_0_GREEN_O_pin = lab4_peripheral_0_GREEN_O, DIR = O, VEC = [7:0]
+ PORT lab4_peripheral_0_BLUE_O_pin = lab4_peripheral_0_BLUE_O, DIR = O, VEC = [7:0]
 
 
 BEGIN proc_sys_reset
@@ -158,11 +169,23 @@ BEGIN axi_gpio
  PORT GPIO_IO_I = DIP_Switches_TRI_I
 END
 
-BEGIN my_peripheral
- PARAMETER INSTANCE = my_peripheral_0
+BEGIN lab4_peripheral
+ PARAMETER INSTANCE = lab4_peripheral_0
  PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x7ae00000
+ PARAMETER C_HIGHADDR = 0x7ae0ffff
  BUS_INTERFACE S_AXI = axi4lite_0
- PORT DIP_Data = DIP_Switches_TRI_I
- PORT LED_Data = my_peripheral_0_LED_Data
+ PORT S_AXI_ACLK = net_lab4_peripheral_0_S_AXI_ACLK_pin
+ PORT CLK_I = net_lab4_peripheral_0_CLK_I_pin
+ PORT RESET_N_I = net_lab4_peripheral_0_RESET_N_I_pin
+ PORT VGA_HSYNC_O = lab4_peripheral_0_VGA_HSYNC_O
+ PORT VGA_VSYNC_O = lab4_peripheral_0_VGA_VSYNC_O
+ PORT BLANK_O = lab4_peripheral_0_BLANK_O
+ PORT PIX_CLOCK_O = lab4_peripheral_0_PIX_CLOCK_O
+ PORT PSAVE_O = lab4_peripheral_0_PSAVE_O
+ PORT SYNC_O = lab4_peripheral_0_SYNC_O
+ PORT RED_O = lab4_peripheral_0_RED_O
+ PORT GREEN_O = lab4_peripheral_0_GREEN_O
+ PORT BLUE_O = lab4_peripheral_0_BLUE_O
 END
 

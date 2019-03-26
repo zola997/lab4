@@ -5,17 +5,62 @@
 # additional constraints
 #
 
+NET lab4_peripheral_0_CLK_I_pin             LOC = M21 | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RESET_N_I_pin     LOC = AE24 | IOSTANDARD = LVCMOS33; # AKA UI_JOY2
+
+
+
 NET "CLK" TNM_NET = sys_clk_pin;
 TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
 
+NET direct_mode_i     LOC = W19;
+NET display_mode_i(0) LOC = Y24;
+NET display_mode_i(1) LOC = K19;
+
+NET lab4_peripheral_0_VGA_HSYNC_O_pin       LOC = B22  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_VGA_VSYNC_O_pin       LOC = A22  | IOSTANDARD = LVTTL;
+
+NET lab4_peripheral_0_BLANK_O_pin         LOC = B16  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_PIX_CLOCK_O_pin      LOC = C14  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_PSAVE_O_pin           LOC = A2   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_SYNC_O_pin           LOC = A17  | IOSTANDARD = LVTTL;
+
+NET lab4_peripheral_0_RED_O_pin(0)          LOC = B4   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(1)          LOC = A4   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(2)          LOC = A5   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(3)          LOC = B6   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(4)          LOC = A6   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(5)          LOC = A7   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(6)          LOC = B8   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_RED_O_pin(7)          LOC = A8   | IOSTANDARD = LVTTL;
+
+NET lab4_peripheral_0_GREEN_O_pin(0)        LOC = A9   | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(1)        LOC = A11  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(2)        LOC = B12  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(3)        LOC = A12  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(4)        LOC = N17  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(5)        LOC = A13  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(6)        LOC = N18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_GREEN_O_pin(7)        LOC = A16  | IOSTANDARD = LVTTL;
+
+NET lab4_peripheral_0_BLUE_O_pin(0)         LOC = A18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(1)         LOC = B18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(2)         LOC = L17  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(3)         LOC = M18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(4)         LOC = C18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(5)         LOC = K18  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(6)         LOC = C19  | IOSTANDARD = LVTTL;
+NET lab4_peripheral_0_BLUE_O_pin(7)         LOC = C20  | IOSTANDARD = LVTTL;
+
+
 NET CLK_N               LOC = AF14 | IOSTANDARD = LVDS_33;
 NET CLK_P                  LOC = AD14 | IOSTANDARD = LVDS_33;
-NET RESET                  LOC = AE24 | IOSTANDARD = LVCMOS33;
+NET RESET                  LOC = AA23 | IOSTANDARD = LVCMOS33;
 NET RS232_Uart_1_sin       LOC = A21  | IOSTANDARD = LVTTL;
 NET RS232_Uart_1_sout      LOC = A20  | IOSTANDARD = LVTTL;
-NET DIP_Switches_TRI_I(0)  LOC = W19  | IOSTANDARD = LVTTL;
-NET DIP_Switches_TRI_I(1)  LOC = Y24  | IOSTANDARD = LVTTL;
-NET DIP_Switches_TRI_I(2)  LOC = K19  | IOSTANDARD = LVTTL;
+NET DIP_Switches_TRI_I(0)  LOC = AC24  | IOSTANDARD = LVTTL;
+NET DIP_Switches_TRI_I(1)  LOC = AA24  | IOSTANDARD = LVTTL;
+NET DIP_Switches_TRI_I(2)  LOC = AB24  | IOSTANDARD = LVTTL;
 NET DIP_Switches_TRI_I(3)  LOC = V24  | IOSTANDARD = LVTTL;
 NET DIP_Switches_TRI_I(4)  LOC = U20  | IOSTANDARD = LVTTL;
 NET DIP_Switches_TRI_I(5)  LOC = U23  | IOSTANDARD = LVTTL;
