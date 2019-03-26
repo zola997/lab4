@@ -1,0 +1,15 @@
+D:\ra205-2016\lab3\basic_system\implementation\system.ngc 1552990520
+D:/ra205-2016/lab3/basic_system/implementation/system_dip_switches_wrapper.ngc 1552990493
+D:/ra205-2016/lab3/basic_system/implementation/system_rs232_wrapper.ngc 1552990479
+D:/ra205-2016/lab3/basic_system/implementation/system_proc_sys_reset_0_wrapper.ngc 1552990401
+D:/ra205-2016/lab3/basic_system/implementation/system_clock_generator_0_wrapper.ngc 1552990505
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_ilmb_wrapper.ngc 1552990496
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_dlmb_wrapper.ngc 1552990499
+D:/ra205-2016/lab3/basic_system/implementation/system_axi4lite_0_wrapper.ngc 1552990508
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_wrapper.ngc 1552990502
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc 1552990411
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc 1552990420
+D:/ra205-2016/lab3/basic_system/implementation/system_debug_module_wrapper.ngc 1552990459
+D:/ra205-2016/lab3/basic_system/implementation/system_leds_wrapper.ngc 1552990486
+D:/ra205-2016/lab3/basic_system/implementation/system_microblaze_0_bram_block_wrapper.ngc 1552990425
+OK
