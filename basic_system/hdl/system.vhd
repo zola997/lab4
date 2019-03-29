@@ -12,10 +12,23 @@ entity system is
     RS232_Uart_1_sout : out std_logic;
     RS232_Uart_1_sin : in std_logic;
     RESET : in std_logic;
-    LEDS_TRI_O : out std_logic_vector(0 to 7);
     DIP_Switches_TRI_I : in std_logic_vector(0 to 7);
     CLK_P : in std_logic;
-    CLK_N : in std_logic
+    CLK_N : in std_logic;
+    lab4_peripheral_0_S_AXI_ACLK_pin : in std_logic;
+    lab4_peripheral_0_CLK_I_pin : in std_logic;
+    lab4_peripheral_0_RESET_N_I_pin : in std_logic;
+    lab4_peripheral_0_VGA_HSYNC_O_pin : out std_logic;
+    lab4_peripheral_0_VGA_VSYNC_O_pin : out std_logic;
+    lab4_peripheral_0_BLANK_O_pin : out std_logic;
+    lab4_peripheral_0_PIX_CLOCK_O_pin : out std_logic;
+    lab4_peripheral_0_PSAVE_O_pin : out std_logic;
+    lab4_peripheral_0_SYNC_O_pin : out std_logic;
+    lab4_peripheral_0_RED_O_pin : out std_logic_vector(7 downto 0);
+    lab4_peripheral_0_GREEN_O_pin : out std_logic_vector(7 downto 0);
+    lab4_peripheral_0_BLUE_O_pin : out std_logic_vector(7 downto 0);
+    lab4_peripheral_0_DIRECT_MODE_I_pin : in std_logic;
+    lab4_peripheral_0_DISPLAY_MODE_I_pin : in std_logic_vector(1 downto 0)
   );
 end system;
 
@@ -1628,7 +1641,7 @@ architecture STRUCTURE of system is
     );
   end component;
 
-  component system_leds_wrapper is
+  component system_dip_switches_wrapper is
     port (
       S_AXI_ACLK : in std_logic;
       S_AXI_ARESETN : in std_logic;
@@ -1659,34 +1672,40 @@ architecture STRUCTURE of system is
     );
   end component;
 
-  component system_dip_switches_wrapper is
+  component system_lab4_peripheral_0_wrapper is
     port (
       S_AXI_ACLK : in std_logic;
       S_AXI_ARESETN : in std_logic;
-      S_AXI_AWADDR : in std_logic_vector(8 downto 0);
+      S_AXI_AWADDR : in std_logic_vector(31 downto 0);
       S_AXI_AWVALID : in std_logic;
-      S_AXI_AWREADY : out std_logic;
       S_AXI_WDATA : in std_logic_vector(31 downto 0);
       S_AXI_WSTRB : in std_logic_vector(3 downto 0);
       S_AXI_WVALID : in std_logic;
-      S_AXI_WREADY : out std_logic;
-      S_AXI_BRESP : out std_logic_vector(1 downto 0);
-      S_AXI_BVALID : out std_logic;
       S_AXI_BREADY : in std_logic;
-      S_AXI_ARADDR : in std_logic_vector(8 downto 0);
+      S_AXI_ARADDR : in std_logic_vector(31 downto 0);
       S_AXI_ARVALID : in std_logic;
+      S_AXI_RREADY : in std_logic;
       S_AXI_ARREADY : out std_logic;
       S_AXI_RDATA : out std_logic_vector(31 downto 0);
       S_AXI_RRESP : out std_logic_vector(1 downto 0);
       S_AXI_RVALID : out std_logic;
-      S_AXI_RREADY : in std_logic;
-      IP2INTC_Irpt : out std_logic;
-      GPIO_IO_I : in std_logic_vector(7 downto 0);
-      GPIO_IO_O : out std_logic_vector(7 downto 0);
-      GPIO_IO_T : out std_logic_vector(7 downto 0);
-      GPIO2_IO_I : in std_logic_vector(31 downto 0);
-      GPIO2_IO_O : out std_logic_vector(31 downto 0);
-      GPIO2_IO_T : out std_logic_vector(31 downto 0)
+      S_AXI_WREADY : out std_logic;
+      S_AXI_BRESP : out std_logic_vector(1 downto 0);
+      S_AXI_BVALID : out std_logic;
+      S_AXI_AWREADY : out std_logic;
+      DIRECT_MODE_I : in std_logic;
+      DISPLAY_MODE_I : in std_logic_vector(1 downto 0);
+      CLK_I : in std_logic;
+      RESET_N_I : in std_logic;
+      VGA_HSYNC_O : out std_logic;
+      VGA_VSYNC_O : out std_logic;
+      BLANK_O : out std_logic;
+      PIX_CLOCK_O : out std_logic;
+      PSAVE_O : out std_logic;
+      SYNC_O : out std_logic;
+      RED_O : out std_logic_vector(7 downto 0);
+      GREEN_O : out std_logic_vector(7 downto 0);
+      BLUE_O : out std_logic_vector(7 downto 0)
     );
   end component;
 
@@ -1759,6 +1778,15 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
   signal clk_100_0000MHz : std_logic_vector(0 to 0);
+  signal lab4_peripheral_0_BLANK_O : std_logic;
+  signal lab4_peripheral_0_BLUE_O : std_logic_vector(7 downto 0);
+  signal lab4_peripheral_0_GREEN_O : std_logic_vector(7 downto 0);
+  signal lab4_peripheral_0_PIX_CLOCK_O : std_logic;
+  signal lab4_peripheral_0_PSAVE_O : std_logic;
+  signal lab4_peripheral_0_RED_O : std_logic_vector(7 downto 0);
+  signal lab4_peripheral_0_SYNC_O : std_logic;
+  signal lab4_peripheral_0_VGA_HSYNC_O : std_logic;
+  signal lab4_peripheral_0_VGA_VSYNC_O : std_logic;
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr : std_logic_vector(0 to 31);
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk : std_logic;
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Din : std_logic_vector(0 to 31);
@@ -1829,10 +1857,14 @@ architecture STRUCTURE of system is
   signal net_gnd2 : std_logic_vector(0 to 1);
   signal net_gnd3 : std_logic_vector(0 to 2);
   signal net_gnd4 : std_logic_vector(0 to 3);
-  signal net_gnd8 : std_logic_vector(7 downto 0);
   signal net_gnd16 : std_logic_vector(0 to 15);
   signal net_gnd32 : std_logic_vector(0 to 31);
   signal net_gnd4096 : std_logic_vector(0 to 4095);
+  signal net_lab4_peripheral_0_CLK_I_pin : std_logic;
+  signal net_lab4_peripheral_0_DIRECT_MODE_I_pin : std_logic;
+  signal net_lab4_peripheral_0_DISPLAY_MODE_I_pin : std_logic_vector(1 downto 0);
+  signal net_lab4_peripheral_0_RESET_N_I_pin : std_logic;
+  signal net_lab4_peripheral_0_S_AXI_ACLK_pin : std_logic;
   signal net_vcc0 : std_logic;
   signal pgassign1 : std_logic_vector(3 downto 0);
   signal proc_sys_reset_0_BUS_STRUCT_RESET : std_logic_vector(0 to 0);
@@ -1853,14 +1885,28 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of system_clock_generator_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_axi4lite_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_rs232_wrapper : component is "user_black_box";
-  attribute BOX_TYPE of system_leds_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_dip_switches_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of system_lab4_peripheral_0_wrapper : component is "user_black_box";
 
 begin
 
   -- Internal assignments
 
-  pgassign1(3 downto 3) <= clk_100_0000MHz(0 to 0);
+  net_lab4_peripheral_0_S_AXI_ACLK_pin <= lab4_peripheral_0_S_AXI_ACLK_pin;
+  net_lab4_peripheral_0_CLK_I_pin <= lab4_peripheral_0_CLK_I_pin;
+  net_lab4_peripheral_0_RESET_N_I_pin <= lab4_peripheral_0_RESET_N_I_pin;
+  lab4_peripheral_0_VGA_HSYNC_O_pin <= lab4_peripheral_0_VGA_HSYNC_O;
+  lab4_peripheral_0_VGA_VSYNC_O_pin <= lab4_peripheral_0_VGA_VSYNC_O;
+  lab4_peripheral_0_BLANK_O_pin <= lab4_peripheral_0_BLANK_O;
+  lab4_peripheral_0_PIX_CLOCK_O_pin <= lab4_peripheral_0_PIX_CLOCK_O;
+  lab4_peripheral_0_PSAVE_O_pin <= lab4_peripheral_0_PSAVE_O;
+  lab4_peripheral_0_SYNC_O_pin <= lab4_peripheral_0_SYNC_O;
+  lab4_peripheral_0_RED_O_pin <= lab4_peripheral_0_RED_O;
+  lab4_peripheral_0_GREEN_O_pin <= lab4_peripheral_0_GREEN_O;
+  lab4_peripheral_0_BLUE_O_pin <= lab4_peripheral_0_BLUE_O;
+  net_lab4_peripheral_0_DIRECT_MODE_I_pin <= lab4_peripheral_0_DIRECT_MODE_I_pin;
+  net_lab4_peripheral_0_DISPLAY_MODE_I_pin <= lab4_peripheral_0_DISPLAY_MODE_I_pin;
+  pgassign1(3) <= net_lab4_peripheral_0_S_AXI_ACLK_pin;
   pgassign1(2 downto 2) <= clk_100_0000MHz(0 to 0);
   pgassign1(1 downto 1) <= clk_100_0000MHz(0 to 0);
   pgassign1(0 downto 0) <= clk_100_0000MHz(0 to 0);
@@ -1872,12 +1918,11 @@ begin
   net_gnd32(0 to 31) <= B"00000000000000000000000000000000";
   net_gnd4(0 to 3) <= B"0000";
   net_gnd4096(0 to 4095) <= X"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-  net_gnd8(7 downto 0) <= B"00000000";
   net_vcc0 <= '1';
 
   proc_sys_reset_0 : system_proc_sys_reset_0_wrapper
     port map (
-      Slowest_sync_clk => pgassign1(3),
+      Slowest_sync_clk => pgassign1(2),
       Ext_Reset_In => RESET,
       Aux_Reset_In => net_gnd0,
       MB_Debug_Sys_Rst => proc_sys_reset_0_MB_Debug_Sys_Rst,
@@ -1903,7 +1948,7 @@ begin
 
   microblaze_0_ilmb : system_microblaze_0_ilmb_wrapper
     port map (
-      LMB_Clk => pgassign1(3),
+      LMB_Clk => pgassign1(2),
       SYS_Rst => proc_sys_reset_0_BUS_STRUCT_RESET(0),
       LMB_Rst => microblaze_0_ilmb_LMB_Rst,
       M_ABus => microblaze_0_ilmb_M_ABus,
@@ -1932,7 +1977,7 @@ begin
 
   microblaze_0_i_bram_ctrl : system_microblaze_0_i_bram_ctrl_wrapper
     port map (
-      LMB_Clk => pgassign1(3),
+      LMB_Clk => pgassign1(2),
       LMB_Rst => microblaze_0_ilmb_LMB_Rst,
       LMB_ABus => microblaze_0_ilmb_LMB_ABus,
       LMB_WriteDBus => microblaze_0_ilmb_LMB_WriteDBus,
@@ -2051,7 +2096,7 @@ begin
 
   microblaze_0_dlmb : system_microblaze_0_dlmb_wrapper
     port map (
-      LMB_Clk => pgassign1(3),
+      LMB_Clk => pgassign1(2),
       SYS_Rst => proc_sys_reset_0_BUS_STRUCT_RESET(0),
       LMB_Rst => microblaze_0_dlmb_LMB_Rst,
       M_ABus => microblaze_0_dlmb_M_ABus,
@@ -2080,7 +2125,7 @@ begin
 
   microblaze_0_d_bram_ctrl : system_microblaze_0_d_bram_ctrl_wrapper
     port map (
-      LMB_Clk => pgassign1(3),
+      LMB_Clk => pgassign1(2),
       LMB_Rst => microblaze_0_dlmb_LMB_Rst,
       LMB_ABus => microblaze_0_dlmb_LMB_ABus,
       LMB_WriteDBus => microblaze_0_dlmb_LMB_WriteDBus,
@@ -2217,7 +2262,7 @@ begin
 
   microblaze_0 : system_microblaze_0_wrapper
     port map (
-      CLK => pgassign1(3),
+      CLK => pgassign1(2),
       RESET => microblaze_0_dlmb_LMB_Rst,
       MB_RESET => proc_sys_reset_0_MB_Reset,
       INTERRUPT => net_gnd0,
@@ -2865,7 +2910,7 @@ begin
       Debug_SYS_Rst => proc_sys_reset_0_MB_Debug_Sys_Rst,
       Ext_BRK => Ext_BRK,
       Ext_NM_BRK => Ext_NM_BRK,
-      S_AXI_ACLK => pgassign1(3),
+      S_AXI_ACLK => pgassign1(2),
       S_AXI_ARESETN => axi4lite_0_M_ARESETN(0),
       S_AXI_AWADDR => axi4lite_0_M_AWADDR(31 downto 0),
       S_AXI_AWVALID => axi4lite_0_M_AWVALID(0),
@@ -3239,12 +3284,12 @@ begin
 
   axi4lite_0 : system_axi4lite_0_wrapper
     port map (
-      INTERCONNECT_ACLK => pgassign1(3),
+      INTERCONNECT_ACLK => pgassign1(2),
       INTERCONNECT_ARESETN => proc_sys_reset_0_Interconnect_aresetn(0),
       S_AXI_ARESET_OUT_N => open,
       M_AXI_ARESET_OUT_N => axi4lite_0_M_ARESETN,
       IRQ => open,
-      S_AXI_ACLK => pgassign1(3 downto 3),
+      S_AXI_ACLK => pgassign1(2 downto 2),
       S_AXI_AWID => axi4lite_0_S_AWID(0 to 0),
       S_AXI_AWADDR => axi4lite_0_S_AWADDR,
       S_AXI_AWLEN => axi4lite_0_S_AWLEN,
@@ -3447,7 +3492,7 @@ begin
 
   RS232 : system_rs232_wrapper
     port map (
-      S_AXI_ACLK => pgassign1(3),
+      S_AXI_ACLK => pgassign1(2),
       S_AXI_ARESETN => axi4lite_0_M_ARESETN(1),
       Interrupt => open,
       S_AXI_AWADDR => axi4lite_0_M_AWADDR(35 downto 32),
@@ -3471,9 +3516,9 @@ begin
       TX => RS232_Uart_1_sout
     );
 
-  LEDS : system_leds_wrapper
+  DIP_Switches : system_dip_switches_wrapper
     port map (
-      S_AXI_ACLK => pgassign1(3),
+      S_AXI_ACLK => pgassign1(2),
       S_AXI_ARESETN => axi4lite_0_M_ARESETN(2),
       S_AXI_AWADDR => axi4lite_0_M_AWADDR(72 downto 64),
       S_AXI_AWVALID => axi4lite_0_M_AWVALID(2),
@@ -3493,42 +3538,48 @@ begin
       S_AXI_RVALID => axi4lite_0_M_RVALID(2),
       S_AXI_RREADY => axi4lite_0_M_RREADY(2),
       IP2INTC_Irpt => open,
-      GPIO_IO_I => net_gnd8,
-      GPIO_IO_O => LEDS_TRI_O(0 to 7),
-      GPIO_IO_T => open,
-      GPIO2_IO_I => net_gnd32(0 to 31),
-      GPIO2_IO_O => open,
-      GPIO2_IO_T => open
-    );
-
-  DIP_Switches : system_dip_switches_wrapper
-    port map (
-      S_AXI_ACLK => pgassign1(3),
-      S_AXI_ARESETN => axi4lite_0_M_ARESETN(3),
-      S_AXI_AWADDR => axi4lite_0_M_AWADDR(104 downto 96),
-      S_AXI_AWVALID => axi4lite_0_M_AWVALID(3),
-      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3),
-      S_AXI_WDATA => axi4lite_0_M_WDATA(127 downto 96),
-      S_AXI_WSTRB => axi4lite_0_M_WSTRB(15 downto 12),
-      S_AXI_WVALID => axi4lite_0_M_WVALID(3),
-      S_AXI_WREADY => axi4lite_0_M_WREADY(3),
-      S_AXI_BRESP => axi4lite_0_M_BRESP(7 downto 6),
-      S_AXI_BVALID => axi4lite_0_M_BVALID(3),
-      S_AXI_BREADY => axi4lite_0_M_BREADY(3),
-      S_AXI_ARADDR => axi4lite_0_M_ARADDR(104 downto 96),
-      S_AXI_ARVALID => axi4lite_0_M_ARVALID(3),
-      S_AXI_ARREADY => axi4lite_0_M_ARREADY(3),
-      S_AXI_RDATA => axi4lite_0_M_RDATA(127 downto 96),
-      S_AXI_RRESP => axi4lite_0_M_RRESP(7 downto 6),
-      S_AXI_RVALID => axi4lite_0_M_RVALID(3),
-      S_AXI_RREADY => axi4lite_0_M_RREADY(3),
-      IP2INTC_Irpt => open,
       GPIO_IO_I => DIP_Switches_TRI_I(0 to 7),
       GPIO_IO_O => open,
       GPIO_IO_T => open,
       GPIO2_IO_I => net_gnd32(0 to 31),
       GPIO2_IO_O => open,
       GPIO2_IO_T => open
+    );
+
+  lab4_peripheral_0 : system_lab4_peripheral_0_wrapper
+    port map (
+      S_AXI_ACLK => pgassign1(3),
+      S_AXI_ARESETN => axi4lite_0_M_ARESETN(3),
+      S_AXI_AWADDR => axi4lite_0_M_AWADDR(127 downto 96),
+      S_AXI_AWVALID => axi4lite_0_M_AWVALID(3),
+      S_AXI_WDATA => axi4lite_0_M_WDATA(127 downto 96),
+      S_AXI_WSTRB => axi4lite_0_M_WSTRB(15 downto 12),
+      S_AXI_WVALID => axi4lite_0_M_WVALID(3),
+      S_AXI_BREADY => axi4lite_0_M_BREADY(3),
+      S_AXI_ARADDR => axi4lite_0_M_ARADDR(127 downto 96),
+      S_AXI_ARVALID => axi4lite_0_M_ARVALID(3),
+      S_AXI_RREADY => axi4lite_0_M_RREADY(3),
+      S_AXI_ARREADY => axi4lite_0_M_ARREADY(3),
+      S_AXI_RDATA => axi4lite_0_M_RDATA(127 downto 96),
+      S_AXI_RRESP => axi4lite_0_M_RRESP(7 downto 6),
+      S_AXI_RVALID => axi4lite_0_M_RVALID(3),
+      S_AXI_WREADY => axi4lite_0_M_WREADY(3),
+      S_AXI_BRESP => axi4lite_0_M_BRESP(7 downto 6),
+      S_AXI_BVALID => axi4lite_0_M_BVALID(3),
+      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3),
+      DIRECT_MODE_I => net_lab4_peripheral_0_DIRECT_MODE_I_pin,
+      DISPLAY_MODE_I => net_lab4_peripheral_0_DISPLAY_MODE_I_pin,
+      CLK_I => net_lab4_peripheral_0_CLK_I_pin,
+      RESET_N_I => net_lab4_peripheral_0_RESET_N_I_pin,
+      VGA_HSYNC_O => lab4_peripheral_0_VGA_HSYNC_O,
+      VGA_VSYNC_O => lab4_peripheral_0_VGA_VSYNC_O,
+      BLANK_O => lab4_peripheral_0_BLANK_O,
+      PIX_CLOCK_O => lab4_peripheral_0_PIX_CLOCK_O,
+      PSAVE_O => lab4_peripheral_0_PSAVE_O,
+      SYNC_O => lab4_peripheral_0_SYNC_O,
+      RED_O => lab4_peripheral_0_RED_O,
+      GREEN_O => lab4_peripheral_0_GREEN_O,
+      BLUE_O => lab4_peripheral_0_BLUE_O
     );
 
   ibufgds_0 : IBUFGDS

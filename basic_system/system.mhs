@@ -29,6 +29,8 @@
  PORT lab4_peripheral_0_RED_O_pin = lab4_peripheral_0_RED_O, DIR = O, VEC = [7:0]
  PORT lab4_peripheral_0_GREEN_O_pin = lab4_peripheral_0_GREEN_O, DIR = O, VEC = [7:0]
  PORT lab4_peripheral_0_BLUE_O_pin = lab4_peripheral_0_BLUE_O, DIR = O, VEC = [7:0]
+ PORT lab4_peripheral_0_DIRECT_MODE_I_pin = net_lab4_peripheral_0_DIRECT_MODE_I_pin, DIR = I
+ PORT lab4_peripheral_0_DISPLAY_MODE_I_pin = net_lab4_peripheral_0_DISPLAY_MODE_I_pin, DIR = I, VEC = [1:0]
 
 
 BEGIN proc_sys_reset
@@ -172,8 +174,8 @@ END
 BEGIN lab4_peripheral
  PARAMETER INSTANCE = lab4_peripheral_0
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x7ae00000
- PARAMETER C_HIGHADDR = 0x7ae0ffff
+ PARAMETER C_BASEADDR = 0x7AE00000
+ PARAMETER C_HIGHADDR = 0x7AE0FFFF
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = net_lab4_peripheral_0_S_AXI_ACLK_pin
  PORT CLK_I = net_lab4_peripheral_0_CLK_I_pin
@@ -187,5 +189,7 @@ BEGIN lab4_peripheral
  PORT RED_O = lab4_peripheral_0_RED_O
  PORT GREEN_O = lab4_peripheral_0_GREEN_O
  PORT BLUE_O = lab4_peripheral_0_BLUE_O
+ PORT DIRECT_MODE_I = net_lab4_peripheral_0_DIRECT_MODE_I_pin
+ PORT DISPLAY_MODE_I = net_lab4_peripheral_0_DISPLAY_MODE_I_pin
 END
 

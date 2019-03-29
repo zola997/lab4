@@ -142,6 +142,8 @@ entity lab4_peripheral is
     -- ADD USER PORTS ABOVE THIS LINE ------------------
     CLK_I          : in  std_logic;
     RESET_N_I      : in  std_logic;
+	 DIRECT_MODE_I  : in std_logic;
+	 DISPLAY_MODE_I : in std_logic_vector(1 downto 0);
     -- vga
     VGA_HSYNC_O    : out std_logic;
     VGA_VSYNC_O    : out std_logic;
@@ -328,15 +330,19 @@ begin
       IP2Bus_WrAck                   => user_IP2Bus_WrAck,
       IP2Bus_Error                   => user_IP2Bus_Error,
 ---- OVDE ------------------
+      direct_mode_i                  => DIRECT_MODE_I,
+	   display_mode_i                 => DISPLAY_MODE_I,
 		clk_i                          => CLK_I,
-	   reset_n_i                          => RESET_N_I,
-		                          => VGA_HSYNC_O,
-		clk_i                          => VGA_VSYNC_O,
-		clk_i                          => BLANK_O,
-		clk_i                          => PIX_CLOCK_O,
-		clk_i                          => PSAVE_O,
-		clk_i                          => SYNC_O,
-		clk_i                          => RED_O,
+	   reset_n_i                      => RESET_N_I,
+		vga_hsync_o                    => VGA_HSYNC_O,
+		vga_vsync_o                    => VGA_VSYNC_O,
+		blank_o                        => BLANK_O,
+		pix_clock_o                    => PIX_CLOCK_O,
+		psave_o                        => PSAVE_O,
+		sync_o                         => SYNC_O,
+		red_o                          => RED_O,
+		green_o                        => GREEN_O,
+		blue_o                         => BLUE_O
     );
 --------------------------------
   ------------------------------------------

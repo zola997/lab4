@@ -21,8 +21,85 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="lab4_peripheral.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="lab4_peripheral.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="lab4_peripheral.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="lab4_peripheral.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="lab4_peripheral.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="lab4_peripheral.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="lab4_peripheral.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="lab4_peripheral.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="lab4_peripheral.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="lab4_peripheral.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="lab4_peripheral_envsettings.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab4_peripheral_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="lab4_peripheral_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab4_peripheral_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-9070890450166637886" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1964820834326269037" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7611132584272396028" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859452503" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855932" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7409091336089942563" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855949" xil_pn:in_ck="6736351038167640380" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7333125443272746242" xil_pn:start_ts="1553855932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="lab4_peripheral.lso"/>
+      <outfile xil_pn:name="lab4_peripheral.ngc"/>
+      <outfile xil_pn:name="lab4_peripheral.ngr"/>
+      <outfile xil_pn:name="lab4_peripheral.prj"/>
+      <outfile xil_pn:name="lab4_peripheral.stx"/>
+      <outfile xil_pn:name="lab4_peripheral.syr"/>
+      <outfile xil_pn:name="lab4_peripheral.xst"/>
+      <outfile xil_pn:name="lab4_peripheral_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855949" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4256452308299697233" xil_pn:start_ts="1553855949">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1553855953" xil_pn:in_ck="-7314860741409821228" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-85049915282258924" xil_pn:start_ts="1553855949">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="lab4_peripheral.bld"/>
+      <outfile xil_pn:name="lab4_peripheral_ngdbuild.xrpt"/>
+    </transform>
+  </transforms>
 
 </generated_project>

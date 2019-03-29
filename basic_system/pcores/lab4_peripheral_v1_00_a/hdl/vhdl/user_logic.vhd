@@ -120,6 +120,8 @@ entity user_logic is
     IP2Bus_Error                   : out std_logic;
 	clk_i          : in  std_logic;
     reset_n_i      : in  std_logic;
+	direct_mode_i       : in  std_logic;
+	display_mode_i    : in std_logic_vector(1 downto 0);
     -- vga
     vga_hsync_o    : out std_logic;
     vga_vsync_o    : out std_logic;
