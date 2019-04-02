@@ -265,6 +265,7 @@ architecture IMP of user_logic is
   signal dir_pixel_column    : std_logic_vector(10 downto 0);
   signal dir_pixel_row       : std_logic_vector(10 downto 0);
   signal offset              : std_logic_vector(7 downto 0);
+  signal offset1 : std_logic_vector(7 downto 0);
   signal cnt_s  : std_logic_vector(23 downto 0);
   
   
@@ -357,8 +358,8 @@ begin
   graphics_lenght <= conv_std_logic_vector(MEM_SIZE*8*8, GRAPH_MEM_ADDR_WIDTH);
   
   -- removed to inputs pin
-  direct_mode <= '0';
-  display_mode     <= "10";  -- 01 - text mode, 10 - graphics mode, 11 - text & graphics
+  --direct_mode <= '0';
+  --display_mode     <= "10";  -- 01 - text mode, 10 - graphics mode, 11 - text & graphics
   
   font_size        <= x"1";
   show_frame       <= '1';
@@ -400,14 +401,14 @@ begin
     clk_i              => clk_i,
     reset_n_i          => reset_n_i,
     --
-    direct_mode_i      => direct_mode,
+    direct_mode_i      => direct_mode_i,
     dir_red_i          => dir_red,
     dir_green_i        => dir_green,
     dir_blue_i         => dir_blue,
     dir_pixel_column_o => dir_pixel_column,
     dir_pixel_row_o    => dir_pixel_row,
     -- cfg
-    display_mode_i     => display_mode,  -- 01 - text mode, 10 - graphics mode, 11 - text & graphics
+    display_mode_i     => display_mode_i,  -- 01 - text mode, 10 - graphics mode, 11 - text & graphics
     -- text mode interface
     text_addr_i        => char_address,
     text_data_i        => char_value,
@@ -440,23 +441,25 @@ begin
   --dir_green
   --dir_blue
   
-	
---	dir_red <= x"FF" when dir_pixel_column <160 else
---	           x"FF" when dir_pixel_column >320 and dir_pixel_column < 480 else
---				  x"00";
---	dir_green <= x"FF" when	dir_pixel_column < 320 else
---					 x"00";
---	dir_blue <= x"FF" when dir_pixel_column < 80 else
---					x"FF" when dir_pixel_column > 160 and dir_pixel_column < 240 else
---					x"FF" when dir_pixel_column > 320 and dir_pixel_column < 400 else
---				x"FF" when dir_pixel_column > 480 and dir_pixel_column < 560 else
---					x"00";
+	dir_red <= x"FF" when dir_pixel_column <160 else
+	           x"FF" when dir_pixel_column >320 and dir_pixel_column < 480 else
+				  x"00";
+	dir_green <= x"FF" when	dir_pixel_column < 320 else
+					 x"00";
+	dir_blue <= x"FF" when dir_pixel_column < 80 else
+					x"FF" when dir_pixel_column > 160 and dir_pixel_column < 240 else
+					x"FF" when dir_pixel_column > 320 and dir_pixel_column < 400 else
+				x"FF" when dir_pixel_column > 480 and dir_pixel_column < 560 else
+					x"00";
  
   -- koristeci signale realizovati logiku koja pise po TXT_MEM
   --char_address
   --char_value
   --char_we
-  char_we <= '1';
+  
+  
+  
+	char_we <= '1';
   
 	process (pix_clock_s, reset_n_i) begin
 	
@@ -464,69 +467,91 @@ begin
 			char_address <= (others=>'0');
 		elsif(rising_edge(pix_clock_s)) then
 		   if (char_address = 4799) then
-			 char_address <= (others=>'0');
-			 else
-			char_address <= char_address + 1;
-		end if;
+				char_address <= (others=>'0');
+			else
+				char_address <= char_address + 1;
+			end if;
 		end if;
 
 	end process;	
 	
 	process(pix_clock_s,reset_n_i) begin
 	   if (reset_n_i ='0') then
+				offset1 <= (others => '0');
 		     cnt_s <=(others=>'0');
-			  offset <= (others => '0');
-			  elsif(rising_edge(pix_clock_s)) then
-			  if (cnt_s = max_cnt) then
-			  
-			    cnt_s <= (others=>'0');
-				  if (offset = 599) then
-				    offset <= (others=>'0');
-					 else offset <= offset + 1;
-					 end if;
-				 else 
-				 cnt_s <= cnt_s + 1;
-				 end if;
-				 end if;
-				 end process;
-				 
+		elsif(rising_edge(pix_clock_s)) then
+			if (cnt_s = max_cnt) then 
+				cnt_s <= (others=>'0');
+				if(offset1 = 1200) then
+					offset1 <= (others => '0');
+				else
+					offset1 <= offset1 + 1;
+				end if;
+			else 
+				cnt_s <= cnt_s + 1;
+			end if;
+		end if;
+	end process;
 	
-	   
-	
-	
-	
-	char_value <=  "001100" when char_address=85+offset else
-	               "000001" when char_address=86+offset else
-					   "011010" when char_address=87+offset else
-						"000001" when char_address=88+offset else
-						"100000" when char_address=89+offset else
-						"001001" when char_address=90+offset else
-						"100000" when char_address=91+offset else
-						"001101" when char_address=92+offset else
-						"001001" when char_address=93+offset else
-						"010011" when char_address=94+offset else
-						"001011" when char_address=95+offset else
-						"001111" when char_address=96+offset else
+	char_value <=  "001100" when char_address=85+offset1 else
+	               "000001" when char_address=86+offset1 else
+					   "011010" when char_address=87+offset1 else
+						"000001" when char_address=88+offset1 else
+						"100000" when char_address=89+offset1 else
+						"001001" when char_address=90+offset1 else
+						"100000" when char_address=91+offset1 else
+						"001101" when char_address=92+offset1 else
+						"001001" when char_address=93+offset1 else
+						"010011" when char_address=94+offset1 else
+						"001011" when char_address=95+offset1 else
+						"001111" when char_address=96+offset1 else
 						"100000";
   
   -- koristeci signale realizovati logiku koja pise po GRAPH_MEM
   --pixel_address
   --pixel_value
   --pixel_we
-    pixel_we <= '1';
-	 process (pix_clock_s,reset_n_i) begin
+  --4490, 4510, 4530...5130
+   pixel_we <= '1';
+	 
+	process (pix_clock_s,reset_n_i) begin
 	   if (reset_n_i ='0') then
-		pixel_address <= (others =>'0');
+			pixel_address <= "00000000000000001010";
 		elsif (rising_edge(pix_clock_s)) then
 		    if (pixel_address = 9600) then
-			 pixel_address <= (others => '0');
+				pixel_address <= (others => '0');
 			 else 
-			 pixel_address <= pixel_address + 1;
+				pixel_address <= pixel_address + 1;
 			 end if;
-			 end if;
-			 end process;
-			 
+		end if;
+	end process;
 	
-	 pixel_value <= (others => '1') when pixel_address = 4010
-	   else (others=>'0');
+	process(pix_clock_s,reset_n_i) begin
+	   if (reset_n_i ='0') then
+				offset <= (others => '0');
+		     cnt_s <=(others=>'0');
+		elsif(rising_edge(pix_clock_s)) then
+			if (cnt_s = max_cnt) then 
+				cnt_s <= (others=>'0');
+				if(offset = 20) then
+					offset <= (others => '0');
+				else
+					offset <= offset + 1;
+				end if;
+			else 
+				cnt_s <= cnt_s + 1;
+			end if;
+		end if;
+	end process;
+	
+	
+	pixel_value <= (others=>'1') when pixel_address = 4480 + offset
+	or pixel_address = 4500 + offset  or pixel_address = 4520 + offset  or pixel_address = 4540 + offset  or pixel_address = 4560 + offset
+	 or pixel_address = 4580 + offset  or pixel_address = 4600 + offset  or pixel_address = 4620 + offset  or pixel_address = 4640 + offset  or pixel_address = 4660 + offset
+	  or pixel_address = 4680 + offset  or pixel_address = 4700 + offset  or pixel_address = 4720 + offset  or pixel_address = 4740 + offset  or pixel_address = 4760 + offset 
+	   or pixel_address = 4780 + offset  or pixel_address = 4800 + offset  or pixel_address = 4820 + offset  or pixel_address = 4840 + offset  or pixel_address = 4860 + offset 
+		 or pixel_address = 4880 + offset  or pixel_address = 4900 + offset  or pixel_address = 4920 + offset  or pixel_address = 4940 + offset  or pixel_address = 4960 + offset 
+		  or pixel_address = 4980 + offset  or pixel_address = 5000 + offset  or pixel_address = 5020 + offset  or pixel_address = 5040 + offset  or pixel_address = 5060 + offset 
+		   or pixel_address = 5080 + offset  or pixel_address = 5100 + offset else
+(others => '0');
 end IMP;

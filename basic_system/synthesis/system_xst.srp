@@ -1002,11 +1002,12 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 8.
 INFO:Xst:2260 - The FF/Latch <DIP_Switches/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> in Unit <DIP_Switches> is equivalent to the following FF/Latch : <DIP_Switches/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_1> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_1_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_2> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_2_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_3> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_3_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_4> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_4_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_5> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_5_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_1> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_1_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_2> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_2_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_3> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_3_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_4> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_4_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_5> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_5_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_0> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_0_1> 
 INFO:Xst:2260 - The FF/Latch <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <RS232> is equivalent to the following FF/Latch : <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/gen_async_readwrite.asyncfifo_rw> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/gen_async_readwrite.asyncfifo_rw> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
@@ -1050,11 +1051,12 @@ INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_
 INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1> 
 INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_1> 
 INFO:Xst:2260 - The FF/Latch <DIP_Switches/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> in Unit <DIP_Switches> is equivalent to the following FF/Latch : <DIP_Switches/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_1> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_1_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_2> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_2_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_3> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_3_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_4> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_4_1> 
-INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset_5> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset_5_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_1> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_1_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_2> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_2_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_3> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_3_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_4> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_4_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_5> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_5_1> 
+INFO:Xst:2260 - The FF/Latch <lab4_peripheral_0/USER_LOGIC_I/offset1_0> in Unit <lab4_peripheral_0> is equivalent to the following FF/Latch : <lab4_peripheral_0/USER_LOGIC_I/offset1_0_1> 
 INFO:Xst:2260 - The FF/Latch <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <RS232> is equivalent to the following FF/Latch : <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/gen_async_readwrite.asyncfifo_rw> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/gen_async_readwrite.asyncfifo_rw> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
@@ -1161,36 +1163,37 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3830
+# BELS                             : 4093
 #      GND                         : 16
 #      INV                         : 94
-#      LUT1                        : 98
-#      LUT2                        : 295
-#      LUT3                        : 523
-#      LUT4                        : 373
-#      LUT5                        : 598
-#      LUT6                        : 1053
+#      LUT1                        : 92
+#      LUT2                        : 290
+#      LUT3                        : 530
+#      LUT4                        : 385
+#      LUT5                        : 639
+#      LUT6                        : 1110
 #      LUT6_2                      : 96
 #      MULT_AND                    : 2
-#      MUXCY                       : 121
+#      MUXCY                       : 279
 #      MUXCY_L                     : 165
 #      MUXF7                       : 171
 #      VCC                         : 11
-#      XORCY                       : 214
-# FlipFlops/Latches                : 3124
+#      XORCY                       : 213
+# FlipFlops/Latches                : 3126
 #      FD                          : 240
-#      FDC                         : 366
+#      FDC                         : 358
 #      FDC_1                       : 5
-#      FDCE                        : 126
+#      FDCE                        : 132
 #      FDE                         : 773
 #      FDE_1                       : 8
-#      FDP                         : 94
+#      FDP                         : 96
 #      FDPE                        : 8
 #      FDR                         : 709
-#      FDRE                        : 726
+#      FDRE                        : 727
 #      FDRE_1                      : 1
 #      FDS                         : 18
 #      FDSE                        : 49
+#      LD                          : 1
 #      ODDR2                       : 1
 # RAMS                             : 80
 #      RAM32M                      : 48
@@ -1200,19 +1203,21 @@ Primitive and Black Box Usage:
 #      SRL16                       : 2
 #      SRL16E                      : 34
 #      SRLC16E                     : 105
-# Clock Buffers                    : 5
-#      BUFG                        : 4
+# Clock Buffers                    : 6
+#      BUFG                        : 5
 #      BUFGP                       : 1
 # IO Buffers                       : 47
-#      IBUF                        : 15
+#      IBUF                        : 14
+#      IBUFG                       : 1
 #      IBUFGDS                     : 1
 #      OBUF                        : 31
+# DCMs                             : 1
+#      DCM_SP                      : 1
 # DSPs                             : 5
 #      DSP48A1                     : 5
-# Others                           : 4
+# Others                           : 3
 #      AND2B1L                     : 1
 #      BSCAN_SPARTAN6              : 1
-#      dcm25MHz                    : 1
 #      PLL_ADV                     : 1
 
 Device utilization summary:
@@ -1222,28 +1227,28 @@ Selected Device : 6slx45fgg676-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3124  out of  54576     5%  
- Number of Slice LUTs:                 3485  out of  27288    12%  
-    Number used as Logic:              3130  out of  27288    11%  
+ Number of Slice Registers:            3126  out of  54576     5%  
+ Number of Slice LUTs:                 3591  out of  27288    13%  
+    Number used as Logic:              3236  out of  27288    11%  
     Number used as Memory:              355  out of   6408     5%  
        Number used as RAM:              214
        Number used as SRL:              141
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5091
-   Number with an unused Flip Flop:    1967  out of   5091    38%  
-   Number with an unused LUT:          1606  out of   5091    31%  
-   Number of fully used LUT-FF pairs:  1518  out of   5091    29%  
-   Number of unique control sets:       193
+ Number of LUT Flip Flop pairs used:   5205
+   Number with an unused Flip Flop:    2079  out of   5205    39%  
+   Number with an unused LUT:          1614  out of   5205    31%  
+   Number of fully used LUT-FF pairs:  1512  out of   5205    29%  
+   Number of unique control sets:       194
 
 IO Utilization: 
  Number of IOs:                          49
- Number of bonded IOBs:                  49  out of    358    13%  
+ Number of bonded IOBs:                  48  out of    358    13%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               21  out of    116    18%  
     Number using Block RAM only:         21
- Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
  Number of DSP48A1s:                      5  out of     58     8%  
  Number of PLL_ADVs:                      1  out of      4    25%  
 
@@ -1265,15 +1270,19 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                          | Clock buffer(FF name)                                                                                             | Load  |
-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
-CLK_P                                                                 | PLL_ADV:CLKOUT0                                                                                                   | 2313  |
-lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s| NONE(lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/SRL16_inst)                                 | 114   |
-lab4_peripheral_0_S_AXI_ACLK_pin                                      | BUFGP                                                                                                             | 672   |
-debug_module/debug_module/drck_i                                      | BUFG                                                                                                              | 209   |
-debug_module/Ext_JTAG_UPDATE                                          | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)| 43    |
-----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                                                     | Clock buffer(FF name)                                                                                             | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
+CLK_P                                                                                                                                                                                                            | PLL_ADV:CLKOUT0                                                                                                   | 2313  |
+lab4_peripheral_0_CLK_I_pin                                                                                                                                                                                      | DCM_SP:CLKFX                                                                                                      | 115   |
+lab4_peripheral_0_S_AXI_ACLK_pin                                                                                                                                                                                 | BUFGP                                                                                                             | 672   |
+lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o(lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o1:O)| NONE(*)(lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/active_pixel_s)                                | 1     |
+debug_module/debug_module/drck_i                                                                                                                                                                                 | BUFG                                                                                                              | 209   |
+debug_module/Ext_JTAG_UPDATE                                                                                                                                                                                     | NONE(microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)| 43    |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1287,7 +1296,7 @@ Speed Grade: -2
    Minimum period: 18.715ns (Maximum Frequency: 53.434MHz)
    Minimum input arrival time before clock: 8.502ns
    Maximum output required time after clock: 11.582ns
-   Maximum combinational path delay: 4.239ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
@@ -1322,25 +1331,25 @@ Delay:               9.357ns (Levels of Logic = 7)
                                        (27.0% logic, 73.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s'
-  Clock period: 12.729ns (frequency: 78.561MHz)
-  Total number of paths / destination ports: 13407 / 303
+Timing constraint: Default period analysis for Clock 'lab4_peripheral_0_CLK_I_pin'
+  Clock period: 11.786ns (frequency: 84.846MHz)
+  Total number of paths / destination ports: 11601 / 312
 -------------------------------------------------------------------------
 Delay:               12.729ns (Levels of Logic = 3)
   Source:            lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/v_count_r_8 (FF)
-  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem3 (RAM)
-  Source Clock:      lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s rising
-  Destination Clock: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s rising
+  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem2 (RAM)
+  Source Clock:      lab4_peripheral_0_CLK_I_pin rising 0.9X
+  Destination Clock: lab4_peripheral_0_CLK_I_pin rising 0.9X
 
-  Data Path: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/v_count_r_8 to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem3
+  Data Path: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/v_count_r_8 to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q            17   0.525   1.208  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/v_count_r_8 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/v_count_r<8>)
-     DSP48A1:B4->P13      13   7.335   1.206  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/Maddsub_n0103 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/txt_rom_addr_c<13>)
-     LUT2:I0->O            1   0.250   0.790  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mmux_index13_SW0 (N10)
-     LUT6:I4->O            3   0.250   0.765  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mmux_index13 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/index<9>)
-     RAMB16BWER:ADDRB10        0.400          lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem3
+     DSP48A1:B4->P11       4   7.335   0.912  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/Maddsub_n0103 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/txt_rom_addr_c<11>)
+     LUT2:I0->O            9   0.250   1.084  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/index_t[30]_GND_30_o_LessThan_5_o1_SW1 (N39)
+     LUT6:I4->O            3   0.250   0.765  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mmux_index14 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/index<0>)
+     RAMB16BWER:ADDRB1         0.400          lab4_peripheral_0/USER_LOGIC_I/vga_top_i/text_mem_i/Mram_text_mem2
     ----------------------------------------
     Total                     12.729ns (8.760ns logic, 3.969ns route)
                                        (68.8% logic, 31.2% route)
@@ -1454,25 +1463,46 @@ Offset:              2.382ns (Levels of Logic = 3)
                                        (69.5% logic, 30.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s'
-  Total number of paths / destination ports: 71 / 71
+Timing constraint: Default OFFSET IN BEFORE for Clock 'lab4_peripheral_0_CLK_I_pin'
+  Total number of paths / destination ports: 73 / 73
 -------------------------------------------------------------------------
 Offset:              4.698ns (Levels of Logic = 3)
   Source:            lab4_peripheral_0_RESET_N_I_pin (PAD)
-  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/offset_7 (FF)
-  Destination Clock: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s rising
+  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/offset_4 (FF)
+  Destination Clock: lab4_peripheral_0_CLK_I_pin rising 0.9X
 
-  Data Path: lab4_peripheral_0_RESET_N_I_pin to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/offset_7
+  Data Path: lab4_peripheral_0_RESET_N_I_pin to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/offset_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.328   0.681  lab4_peripheral_0_RESET_N_I_pin_IBUF (lab4_peripheral_0_RESET_N_I_pin_IBUF)
      begin scope: 'lab4_peripheral_0:RESET_N_I'
      INV:I->O             70   0.255   1.975  lab4_peripheral_0/USER_LOGIC_I/reset_n_i_inv1_INV_0 (lab4_peripheral_0/USER_LOGIC_I/reset_n_i_inv)
-     FDC:CLR                   0.459          lab4_peripheral_0/USER_LOGIC_I/pixel_address_0
+     FDC:CLR                   0.459          lab4_peripheral_0/USER_LOGIC_I/char_address_0
     ----------------------------------------
     Total                      4.698ns (2.042ns logic, 2.656ns route)
                                        (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              2.620ns (Levels of Logic = 3)
+  Source:            lab4_peripheral_0_DISPLAY_MODE_I_pin<1> (PAD)
+  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/active_pixel_s (LATCH)
+  Destination Clock: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o falling
+
+  Data Path: lab4_peripheral_0_DISPLAY_MODE_I_pin<1> to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/active_pixel_s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   1.002  lab4_peripheral_0_DISPLAY_MODE_I_pin_1_IBUF (lab4_peripheral_0_DISPLAY_MODE_I_pin_1_IBUF)
+     begin scope: 'lab4_peripheral_0:DISPLAY_MODE_I<1>'
+     LUT4:I0->O            1   0.254   0.000  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/Mmux_active_pixel_s_rom_out_s_MUX_160_o11 (lab4_peripheral_0/USER_LOGIC_I/vga_top_i/active_pixel_s_rom_out_s_MUX_160_o)
+     LD:D                      0.036          lab4_peripheral_0/USER_LOGIC_I/vga_top_i/active_pixel_s
+    ----------------------------------------
+    Total                      2.620ns (1.618ns logic, 1.002ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'debug_module/debug_module/drck_i'
@@ -1531,24 +1561,24 @@ Offset:              8.502ns (Levels of Logic = 6)
                                        (23.3% logic, 76.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'lab4_peripheral_0_CLK_I_pin'
   Total number of paths / destination ports: 29 / 29
 -------------------------------------------------------------------------
-Offset:              4.618ns (Levels of Logic = 2)
-  Source:            lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/green_r_0 (FF)
-  Destination:       lab4_peripheral_0_GREEN_O_pin<7> (PAD)
-  Source Clock:      lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s rising
+Offset:              4.380ns (Levels of Logic = 2)
+  Source:            lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/red_r_7 (FF)
+  Destination:       lab4_peripheral_0_RED_O_pin<7> (PAD)
+  Source Clock:      lab4_peripheral_0_CLK_I_pin rising 0.9X
 
-  Data Path: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/green_r_0 to lab4_peripheral_0_GREEN_O_pin<7>
+  Data Path: lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/red_r_7 to lab4_peripheral_0_RED_O_pin<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            16   0.525   1.181  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/green_r_0 (BLUE_O<0>)
-     end scope: 'lab4_peripheral_0:BLUE_O<0>'
-     OBUF:I->O                 2.912          lab4_peripheral_0_BLUE_O_pin_0_OBUF (lab4_peripheral_0_BLUE_O_pin<0>)
+     FDRE:C->Q             8   0.525   0.943  lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/vga_sync_i/red_r_7 (RED_O<0>)
+     end scope: 'lab4_peripheral_0:RED_O<0>'
+     OBUF:I->O                 2.912          lab4_peripheral_0_RED_O_pin_0_OBUF (lab4_peripheral_0_RED_O_pin<0>)
     ----------------------------------------
-    Total                      4.618ns (3.437ns logic, 1.181ns route)
-                                       (74.4% logic, 25.6% route)
+    Total                      4.380ns (3.437ns logic, 0.943ns route)
+                                       (78.5% logic, 21.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_P'
@@ -1637,26 +1667,6 @@ Offset:              11.582ns (Levels of Logic = 9)
                                        (21.9% logic, 78.1% route)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Delay:               4.239ns (Levels of Logic = 3)
-  Source:            lab4_peripheral_0_RESET_N_I_pin (PAD)
-  Destination:       lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/res_1.dcm25_i:RESET (PAD)
-
-  Data Path: lab4_peripheral_0_RESET_N_I_pin to lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/res_1.dcm25_i:RESET
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.681  lab4_peripheral_0_RESET_N_I_pin_IBUF (lab4_peripheral_0_RESET_N_I_pin_IBUF)
-     begin scope: 'lab4_peripheral_0:RESET_N_I'
-     INV:I->O             70   0.255   1.975  lab4_peripheral_0/USER_LOGIC_I/reset_n_i_inv1_INV_0 (lab4_peripheral_0/USER_LOGIC_I/reset_n_i_inv)
-    dcm25MHz:RESET             0.000          lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/res_1.dcm25_i
-    ----------------------------------------
-    Total                      4.239ns (1.583ns logic, 2.656ns route)
-                                       (37.3% logic, 62.7% route)
-
-=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -1692,13 +1702,22 @@ debug_module/Ext_JTAG_UPDATE    |         |    5.808|    3.344|         |
 debug_module/debug_module/drck_i|    2.860|    4.093|    3.740|         |
 --------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s
-----------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------------------------------------+---------+---------+---------+---------+
-lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/vga_i/clk_s|   12.729|         |         |         |
-----------------------------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+lab4_peripheral_0_CLK_I_pin|         |         |    4.563|         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock lab4_peripheral_0_CLK_I_pin
+------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+lab4_peripheral_0/lab4_peripheral_0/USER_LOGIC_I/vga_top_i/display_mode_i[1]_display_mode_i[1]_OR_30_o|         |    2.719|         |         |
+lab4_peripheral_0_CLK_I_pin                                                                           |   12.729|         |         |         |
+------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock lab4_peripheral_0_S_AXI_ACLK_pin
 --------------------------------+---------+---------+---------+---------+
@@ -1713,13 +1732,13 @@ lab4_peripheral_0_S_AXI_ACLK_pin|    9.291|         |         |         |
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.38 secs
+Total CPU time to Xst completion: 12.50 secs
  
 --> 
 
-Total memory usage is 317232 kilobytes
+Total memory usage is 317296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)
-Number of infos    :  979 (   0 filtered)
+Number of infos    :  981 (   0 filtered)
 

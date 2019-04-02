@@ -66,7 +66,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 2
+#define XPAR_XGPIO_NUM_INSTANCES 1
 
 /* Definitions for peripheral DIP_SWITCHES */
 #define XPAR_DIP_SWITCHES_BASEADDR 0x40020000
@@ -74,14 +74,6 @@
 #define XPAR_DIP_SWITCHES_DEVICE_ID 0
 #define XPAR_DIP_SWITCHES_INTERRUPT_PRESENT 0
 #define XPAR_DIP_SWITCHES_IS_DUAL 0
-
-
-/* Definitions for peripheral LEDS */
-#define XPAR_LEDS_BASEADDR 0x40000000
-#define XPAR_LEDS_HIGHADDR 0x4000FFFF
-#define XPAR_LEDS_DEVICE_ID 1
-#define XPAR_LEDS_INTERRUPT_PRESENT 0
-#define XPAR_LEDS_IS_DUAL 0
 
 
 /******************************************************************/
@@ -93,12 +85,13 @@
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_0_IS_DUAL 0
 
-/* Canonical definitions for peripheral LEDS */
-#define XPAR_GPIO_1_BASEADDR 0x40000000
-#define XPAR_GPIO_1_HIGHADDR 0x4000FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_LEDS_DEVICE_ID
-#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 0
+
+/******************************************************************/
+
+
+/* Definitions for peripheral LAB4_PERIPHERAL_0 */
+#define XPAR_LAB4_PERIPHERAL_0_BASEADDR 0x7AE00000
+#define XPAR_LAB4_PERIPHERAL_0_HIGHADDR 0x7AE0FFFF
 
 
 /******************************************************************/

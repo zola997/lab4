@@ -76,6 +76,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="lab4_peripheral.lso"/>
       <outfile xil_pn:name="lab4_peripheral.ngc"/>
@@ -95,6 +97,7 @@
     <transform xil_pn:end_ts="1553855953" xil_pn:in_ck="-7314860741409821228" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-85049915282258924" xil_pn:start_ts="1553855949">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="lab4_peripheral.bld"/>

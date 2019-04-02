@@ -16,7 +16,7 @@ use ieee.std_logic_unsigned.all;
 
 entity vga is 
   generic (
-    RESOLUTION_TYPE : natural := 0;
+    RESOLUTION_TYPE : natural := 2;   
     H_RES           : natural := 640;
     V_RES           : natural := 480
  );
