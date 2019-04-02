@@ -106,6 +106,10 @@ entity user_logic is
     --USER ports added here
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
+	
+	Bus2IP_Addr                    : in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
+   Bus2IP_RNW	                   : in std_logic;
+	Bus2IP_CS                      : in std_logic_vector((IPIF_ARD_ADDR_RANGE_ARRAY'LENGTH)/2-1 downto 0);
     -- DO NOT EDIT BELOW THIS LINE ---------------------
     -- Bus protocol ports, do not add to or delete
     Bus2IP_Clk                     : in  std_logic;

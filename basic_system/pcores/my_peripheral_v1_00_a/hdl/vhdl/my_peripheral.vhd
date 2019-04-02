@@ -144,6 +144,10 @@ entity my_peripheral is
 	 
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
+	AXI_ADDR						: out std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
+	AXI_RNW							: out std_logic;
+	AXI_CS							: out std_logic_vector((IPIF_ARD_ADDR_RANGE_ARRAY'LENGTH)/2-1 downto 0);
+	
     -- DO NOT EDIT BELOW THIS LINE ---------------------
     -- Bus protocol ports, do not add to or delete
     S_AXI_ACLK                     : in  std_logic;
@@ -276,10 +280,10 @@ begin
       S_AXI_AWREADY                  => S_AXI_AWREADY,
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,
       Bus2IP_Resetn                  => ipif_Bus2IP_Resetn,
-      Bus2IP_Addr                    => ipif_Bus2IP_Addr,
-      Bus2IP_RNW                     => ipif_Bus2IP_RNW,
+      Bus2IP_Addr                    => AXI_ADDR,
+      Bus2IP_RNW                     => AXI_RNW,
       Bus2IP_BE                      => ipif_Bus2IP_BE,
-      Bus2IP_CS                      => ipif_Bus2IP_CS,
+      Bus2IP_CS                      => AXI_CS,
       Bus2IP_RdCE                    => ipif_Bus2IP_RdCE,
       Bus2IP_WrCE                    => ipif_Bus2IP_WrCE,
       Bus2IP_Data                    => ipif_Bus2IP_Data,
